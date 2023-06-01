@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <!-- Website description -->
+    <meta name='description' content='TJSP Kota Surakarta adalah ...' />
+    <!-- Author Name -->
+    <meta name='author' content='phicosdev' />
+    <!-- SEO keyword -->
+    <meta name='keywords' content='tjsp, surakarta, tanggung jawab sosial perusahaan, sosial'>
+    <!-- Robots Meta Tag -->
+    <meta name='robots' content='index, follow'>
+    <link rel="icon" type="image/png" href="assets/img/uploads/logo-ska-favicon.png">
+    <!-- Stylesheets -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Leaflet CSS Library -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <title>Program Detail | TJSP Kota Surakarta</title>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="preloader-wrap">
+            <img src="assets/img/uploads/logo-ska-favicon.png" alt="logo" class="img-fluid preloader-icon" />
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Content Start -->
+    <div class="main-wrapper">
+        <!-- Header Start -->
+        <header class="main-header w-100">
+            <nav class="navbar navbar-expand-xl navbar-light sticky-header">
+                <div
+                    class="container-fluid container-xxl d-flex align-items-center justify-content-lg-between position-relative">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
+                        <img src="assets/img/uploads/logo-tjsp.png" alt="logo" class="img-fluid img-logo logo-white">
+                        <img src="assets/img/uploads/logo-tjsp.png" alt="logo" class="img-fluid img-logo logo-color">
+                    </a>
+
+                    <a class="navbar-toggler position-absolute right-0 border-0 " href="javascript:void(0);"
+                        role="button">
+                        <span class="far fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+                            aria-controls="offcanvasWithBackdrop"></span>
+                    </a>
+
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+                            <li class="single-link"><a href="index.html" class="nav-link">Beranda</a></li>
+                            <li class="single-link"><a href="profil.html" class="nav-link">Profil</a></li>
+                            <li class="single-link"><a href="program.html" class="nav-link active">Program Kami</a></li>
+                            <li class="single-link"><a href="list-perusahaan.html" class="nav-link">Daftar
+                                    Perusahaan</a></li>
+                            <li class="single-link"><a href="berita.html" class="nav-link">Berita</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Rekap
+                                </a>
+                                <div class="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
+                                    <div class="dropdown-grid rounded-custom width-half">
+                                        <div class="dropdown-grid-item">
+                                            <h6 class="drop-heading">Rekapitulasi TJSP</h6>
+                                            <a href="rekap-data.html" class="dropdown-link">
+                                                <span class="demo-list bg-primary rounded text-white fw-bold">1</span>
+                                                <div class="dropdown-info">
+                                                    <div class="drop-title">Rekap Data TJSP</div>
+                                                    <p>Rekapitulasi Data pada Tahun 2021</p>
+                                                </div>
+                                            </a>
+                                            <a href="rekap-infografis.html" class="dropdown-link">
+                                                <span class="demo-list bg-primary rounded text-white fw-bold">2</span>
+                                                <div class="dropdown-info">
+                                                    <div class="drop-title">Rekap Infografis</div>
+                                                    <p>Rekapitulasi Infografis TJSP</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="single-link"><a href="registrasi.html" class="nav-link">Registrasi</a></li>
+                        </ul>
+                    </div>
+
+                    <!--offcanvas menu start-->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWithBackdrop">
+                        <div class="offcanvas-header d-flex align-items-center mt-4">
+                            <a href="index.html" class="d-flex align-items-center mb-md-0 text-decoration-none">
+                                <img src="assets/img/uploads/logo-tjsp.png" alt="logo" class="img-fluid img-logo ps-2">
+                            </a>
+                            <button type="button" class="close-btn text-danger" data-bs-dismiss="offcanvas"
+                                aria-label="Close"><i class="far fa-close"></i></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+                                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                                <li><a href="profil.html" class="nav-link">Profil</a></li>
+                                <li><a href="program.html" class="nav-link active">Program Kami</a></li>
+                                <li><a href="list-perusahaan.html" class="nav-link">Daftar Perusahaan</a></li>
+                                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Rekap
+                                    </a>
+                                    <div class="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
+                                        <div class="dropdown-grid rounded-custom width-half">
+                                            <div class="dropdown-grid-item">
+                                                <h6 class="drop-heading">Rekapitulasi TJSP</h6>
+                                                <a href="rekap-data.html" class="dropdown-link">
+                                                    <span
+                                                        class="demo-list bg-primary rounded text-white fw-bold">1</span>
+                                                    <div class="dropdown-info">
+                                                        <div class="drop-title">Rekap Data TJSP</div>
+                                                        <p>Rekapitulasi Data pada Tahun 2021</p>
+                                                    </div>
+                                                </a>
+                                                <a href="rekap-infografis.html" class="dropdown-link">
+                                                    <span
+                                                        class="demo-list bg-primary rounded text-white fw-bold">2</span>
+                                                    <div class="dropdown-info">
+                                                        <div class="drop-title">Rekap Infografis</div>
+                                                        <p>Rekapitulasi Infografis TJSP</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="registrasi.html" class="nav-link">Registrasi</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--offcanvas menu end-->
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+
+        <!-- Breadcrumbs Section Start -->
+        <section class="breadcrumb-section page-header position-relative overflow-hidden ptb-50">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="page-banner-content aos-init aos-animate" data-aos="fade-right" data-aos-delay="50"
+                            data-aos-duration="500" data-aos-once="true">
+                            <h2>Kegiatan Penanggulangan Limbah</h2>
+                            <ul>
+                                <li>
+                                    <a href="index.html">Beranda</a>
+                                </li>
+                                <li>
+                                    <a href="program.html">Program</a>
+                                </li>
+                                <li>Kegiatan Penanggulangan Limbah</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="page-banner-image aos-init aos-animate" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <img class="img-fluid big-img" src="assets/img/uploads/background/hero-img.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumbs Section End -->
+
+        <!-- Main Content Start -->
+        <section class="program-details ptb-120">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-8">
+                        <div class="program-details-wrap">
+                            <img src="assets/img/uploads/kegiatan/kegiatan-2.jpg" alt=""
+                                class="img-fluid rounded-custom">
+                            <h2 class="h5">Detail Program</h2>
+                            <p>Objectively restore stand-alone markets rather than enterprise-wide products. Uniquely
+                                underwhelm best-of-breed mindshare through adaptive niches. Seamlessly parallel task
+                                open-source content without resource sucking technology.
+                            </p>
+                            <div class="program-details-info mt-5">
+                                <h3 class="h5">Ketentuan Kegiatan</h3>
+                                <ul class="content-list list-unstyled">
+                                    <li>Be involved in every step of the product design cycle from discovery and user
+                                        acceptance testing.</li>
+                                    <li>Work with BAs, product managers and tech teams to lead the Product Design</li>
+                                    <li>Maintain quality of the design process and ensure that when designs are
+                                        translated into code they accurately.</li>
+                                    <li>Accurately estimate design tickets during planning sessions.</li>
+                                    <li>Contribute to sketching sessions involving non-designersCreate, and pattern
+                                        libraries.</li>
+                                    <li>Design pixel perfect responsive UI’s and understand that adopting common
+                                        interface</li>
+                                    <li>Interface patterns is better for UX than reinventing the wheel</li>
+                                </ul>
+                            </div>
+
+                            <!-- Galeri Start -->
+                            <!-- Galeri End -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="program-overview-wrap bg-light p-5 sticky-sidebar rounded-custom mt-5 mt-lg-0">
+                            <h5>Rincian Program</h5>
+                            <ul class="program-overview-list list-unstyled mt-4">
+                                <li>
+                                    <i class="far fa-map-marker-alt text-primary"></i>
+                                    <div class="overview-item">
+                                        <h6 class="mb-0">Lokasi Kegiatan :</h6>
+                                        <span>Joyosuran, Kec. Pasarkliwon</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="far fa-calendar text-primary"></i>
+                                    <div class="overview-item">
+                                        <h6 class="mb-0">Tanggal Kegiatan :</h6>
+                                        <span>20 / 11 / 2022</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="far fa-calendar text-primary"></i>
+                                    <div class="overview-item">
+                                        <h6 class="mb-0">Waktu Kegiatan :</h6>
+                                        <span>08.00 - 10.30</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="far fa-money-bill text-primary"></i>
+                                    <div class="overview-item">
+                                        <h6 class="mb-0">Dana Terkumpul :</h6>
+                                        <span>Rp. 8.000.000,00</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="far fa-money-check text-primary"></i>
+                                    <div class="overview-item">
+                                        <h6 class="mb-0">Dana Dibutuhkan :</h6>
+                                        <span>Rp. 11.650.000,00</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary d-block mt-5">Partisipasi Kegiatan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Content End -->
+
+        <!-- Footer Start -->
+        <footer class="footer-section position-relative bg-light ptb-50">
+            <div class="divider-top">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <!--footer top start-->
+            <div class="footer-top footer-light">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-12 col-lg-4 mb-md-4 mb-lg-0">
+                            <div class="footer-single-col">
+                                <div class="footer-single-col mb-4">
+                                    <img src="assets/img/uploads/logo-tjsp.png" alt="logo"
+                                        class="img-fluid img-logo logo-dark">
+                                </div>
+                                <p>Tanggung jawab Sosial Perusahaan atau Corporate Social Responsibility (CSR) adalah
+                                    suatu konsep bahwa organisasi, khususnya (namun bukan hanya), perusahaan adalah
+                                    memiliki berbagai bentuk tanggung jawab terhadap seluruh pemangku kepentingannya.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-8 mt-4 mt-md-0 mt-lg-0">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                    <div class="footer-single-col">
+                                        <h3>Halaman Terkait</h3>
+                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                            <li><a href="index.html" class="text-decoration-none">Beranda</a></li>
+                                            <li><a href="profil.html" class="text-decoration-none">Profil</a></li>
+                                            <li><a href="program.html" class="text-decoration-none">Program Kami</a>
+                                            </li>
+                                            <li><a href="list-perusahaan.html" class="text-decoration-none">Daftar
+                                                    Perusahaan</a></li>
+                                            <li><a href="berita.html" class="text-decoration-none">Berita</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                    <div class="footer-single-col">
+                                        <h3>Rekapitulasi TJSP</h3>
+
+                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                            <li><a href="rekap-data.html" class="text-decoration-none">Rekap Data
+                                                    TJSP</a></li>
+                                            <li><a href="rekap-infografis.html" class="text-decoration-none">Rekap
+                                                    Infografis</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                    <div class="footer-single-col">
+                                        <h3>Hubungi Kami</h3>
+                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                            <li>
+                                                <a href="mailto:admin@tjsp.surakarta.go.id" class="contact-list">
+                                                    <i class="fad fa-envelope"></i>
+                                                    <span>admin@tjsp.surakarta.go.id</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="contact-list">
+                                                    <i class="fad fa-location-dot"></i>
+                                                    <span>Komplek Balai Kota Surakarta, Jl. Jend. Sudirman, Kp. Baru,
+                                                        Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57133</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="contact-list">
+                                                    <i class="fad fa-phone"></i>
+                                                    <span>(0271) 642020</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--footer top end-->
+
+            <!--footer bottom start-->
+            <div class="footer-bottom footer-light py-4">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-md-7 col-lg-7">
+                            <div class="copyright-text">
+                                <p class="mb-lg-0 mb-md-0">Hak Cipta &copy; 2022 TJSP Kota Surakarta</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <div class="footer-single-col text-start text-lg-end text-md-end">
+                                <ul class="list-unstyled list-inline footer-social-list mb-0">
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer bottom end-->
+        </footer>
+        <!-- Footer End -->
+    </div>
+    <!-- Content End -->
+
+    <!-- JS Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var map = L.map('map-id', {
+                attributionControl: false,
+                zoomControl: false
+            }).setView([-7.57110295267244, 110.82622065004949], 14);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                minZoom: 6,
+                tileSize: 512,
+                zoomOffset: -1,
+                scrollWheelZoom: false,
+                id: 'mapbox/streets-v11',
+                accessToken: 'pk.eyJ1IjoibmlyZWRvY3oiLCJhIjoiY2tsMjhpM3BkM3JpcDJvcW42cXo3NGNnMSJ9.rBOz7uajzNiVUcgbDfiZ0A'
+            }).addTo(map);
+        })
+    </script>
+</body>
+
+</html>
